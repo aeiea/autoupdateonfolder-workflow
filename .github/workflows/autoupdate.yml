@@ -13,6 +13,7 @@ jobs:
     steps:
       - name: Updating files
         run: |
+          @echo off
           echo Updating Files...
           python ./.github/workflows/autoupdater.py
           echo Done!
