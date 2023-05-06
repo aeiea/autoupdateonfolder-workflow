@@ -1,0 +1,18 @@
+# This is a basic workflow to help you get started with Actions
+
+name: aeiea/autoupdateonfolder-workflow
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Updating files
+        run: |
+          echo Updating Files...
+          python ./.github/workflows/autoupdater.py
+          echo Done!
