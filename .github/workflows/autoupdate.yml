@@ -16,5 +16,5 @@ jobs:
           API_KEY: ${{ secrets.GH_TOKEN }}
         run: |
           echo Updating Files...
-          python .github/workflows/autoupdater.py
+          python ./.github/workflows/autoupdater.py
           echo Done!
