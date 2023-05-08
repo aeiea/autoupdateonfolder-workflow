@@ -5,7 +5,6 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
-
 jobs:
 
   update:
@@ -17,7 +16,7 @@ jobs:
           API_KEY: ${{ secrets.GH_TOKEN }}
         run: |
           echo Updating Files...
-          python autoupdater.py
+          python .github/workflows/autoupdater.py
           echo Done!
       - name: Commit and push changes
         run: |
