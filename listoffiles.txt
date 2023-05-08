@@ -1,1 +1,0 @@
-['hello.txt', 'world.rtf', 'crates.rs', 'weird.file']
