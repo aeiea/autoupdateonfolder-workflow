@@ -19,3 +19,10 @@ jobs:
           echo Updating Files...
           python autoupdater.py
           echo Done!
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "aeiea"
+          git config --global user.email "dpthn@proton.me"
+          git add -A
+          git commit -m "update list"
+          git push
