@@ -19,9 +19,8 @@ print('''
           by @aeiea
  used on {your username}/{repo}
 ''')
-subprocess.run("git clone --depth=1 " + repo_to_update + " thisfolderisgoingtobedeleted && rm -rf thisfolderisgoingtobedeleted/.git", shell=1)
-files = [f for f in os.listdir("thisfolderisgoingtobedeleted/" + folder_to_check_for_updates + "/") if os.path.isfile(os.path.join("thisfolderisgoingtobedeleted/" + folder_to_check_for_updates + "/", f))]
-shutil.rmtree("thisfolderisgoingtobedeleted")
+
+files = [f for f in os.listdir(folder_to_check_for_updates + "/") if os.path.isfile(os.path.join(folder_to_check_for_updates + "/", f))]
 random.shuffle(files)
 thingtoedit = open(file_to_update, "w")
 thingtoedit.write(str(",".join(files)))
